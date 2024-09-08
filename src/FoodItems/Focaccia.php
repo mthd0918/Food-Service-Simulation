@@ -1,14 +1,13 @@
 <?php
 
-namespace FoodItems;
+namespace FoodItems\FoodItem;
 
-class Focaccia extends FoodItems {
-    public function __construct() {
+class CheeseBurger extends FoodItem {
+    public function __construct(string $name, string $description,$price) {
         parent::__construct(
-            "Focaccia",
-            "This is Focaccia",
-            12.0,
-            7
+            $name = "Focaccia",
+            $description = "This is Focaccia",
+            $price = 12.0
         );
     }
 }

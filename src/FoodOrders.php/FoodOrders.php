@@ -1,20 +1,14 @@
 <?php
 namespace FoodOrders;
 
-class FoodOrder{
+use Timestamps\Timestamp;
+
+class FoodOrder {
     private array $items = [];
-    private \DateTime $orderTime;
+    private Timestamp $orderTime;
 
     public function __construct(array $items){
         $this->items = $items;
-        $this->orderTime = new \DateTime();
-    }
-
-    public function getItems(): array{
-        return $this->items;
-    }
-
-    public function getOrderTime(): \DateTime{
-        return $this->orderTime;
+        $this->orderTime = new Timestamp();
     }
 }
