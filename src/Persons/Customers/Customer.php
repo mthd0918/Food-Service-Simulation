@@ -8,11 +8,16 @@ class Customer extends Person {
         parent::__construct($name, $age, $address);
     }
 
-    // public function interestedCategories(Restaurant $menu): array {
+    /**
+    *  + interestedCategories()
+    *
+    *  @return array
+    */
 
-    // }
-
-    // public function order(Restaurant $menu, array $categories): Invoice {
-
-    // }
+    /**
+    *  + order()
+    *  
+    *  @param Restaurant menu, array categories
+    *  @return Invoice
+    */
 }

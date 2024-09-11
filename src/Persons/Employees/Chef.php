@@ -6,7 +6,10 @@ class Chef extends Employee {
         parent::__construct($employeeId, $salary);
     }
 
-    // public function prepareFood(FoodOrder $foodOrder): string {
-
-    // }
+    /**
+     * + prepareFood
+     * 
+     * @param FoodOrder
+     * @return string
+     */
 }

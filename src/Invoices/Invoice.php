@@ -12,12 +12,4 @@ class Invoice {
         $this->finalPrice = $finalPrice;
         $this->orderTime = $orderTime;
     }
-
-    public function setFinalPrice() {
-        return $this->finalPrice;
-    }
-
-    public function setOrderTime() {
-        return $this->orderTime;
-    }
 }
