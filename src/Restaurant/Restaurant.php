@@ -14,8 +14,7 @@ class Restaurant {
         $this->employees = $employees;
     }
 
-    /**
-     * @param array categories
-     * @return Invoice
-     */
+    public function getMenu(): FoodOrder {
+        return $this->menu;
+    }
 }

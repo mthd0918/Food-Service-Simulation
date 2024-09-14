@@ -3,24 +3,35 @@ namespace Persons\Employees;
 
 use Restaurants\Restaurant;
 use FoodOrders\FoodOrder;
-use Invoices\Invoice\Invoice;
+use Invoices\Invoice;
 
 class Casher extends Employee {
-    public function __construct(int $employeeId, float $salary) {
-        parent::__construct($employeeId, $salary);
+    public function __construct(string $name, int $age, string $address, int $employeeId, float $salary){
+        parent::__construct(
+            $name,
+            $age,
+            $address,
+            $employeeId,
+            $salary
+        );
     }
 
-    /**
-     * + generateOrder
-     * 
-     * @param array categories, Restaurant restaurant
-     * @return FoodOrder
-     */
+    public function generateOrder(array $categories, Restaurant $restaurant): FoodOrder {
+        echo "{$this->name} received the order.";
+        $order = new FoodOrder($categories);
+        return $order;
+    }
 
-    /**
-     * + generateInvoice
-     * 
-     * @param FoodOrder order
-     * @return Invoice
-     */
+    public function generateInvoice(FoodOrder $order): Invoice {
+        $invoice = new Invoice($order->getOrderTime());
+
+        echo "{$this->name} received the order.\n";
+        foreach ($order->getItems() as $foodItems) {
+            $invoice->addPrice($foodItems->getPrice());
+        }
+
+        echo "{$this->name} made the invoice.\n";
+
+        return $invoice;
+    }
 }

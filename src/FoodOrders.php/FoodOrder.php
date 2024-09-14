@@ -11,4 +11,12 @@ class FoodOrder {
         $this->items = $items;
         $this->orderTime = new Timestamp();
     }
+
+    public function getItems(): array {
+        return $this->items;
+    }
+
+    public function getOrderTime(): Timestamp {
+        return $this->orderTime;
+    }
 }
