@@ -5,7 +5,7 @@ use Restaurants\Restaurant;
 use FoodOrders\FoodOrder;
 use Invoices\Invoice;
 
-class Casher extends Employee {
+class Cashier extends Employee {
     public function __construct(string $name, int $age, string $address, int $employeeId, float $salary){
         parent::__construct(
             $name,

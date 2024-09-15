@@ -1,9 +1,11 @@
 <?php
 
-namespace FoodItems\FoodItem;
+namespace FoodItems;
+
+use FoodItems\FoodItem;
 
 class Spaghetti extends FoodItem {
-    public function __construct(string $name, string $description, float $price, int $preparationTime) {
+    public function __construct() {
         parent::__construct(
             $name = "Spaghetti",
             $description = "This is Spaghetti",

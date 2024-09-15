@@ -8,8 +8,10 @@ class Invoice {
     protected Timestamp $orderTime;
     protected int $estimatedTimeInMinutes;
 
-    public function __construct(Timestamp $orderTime) {
-        $this->orderTime = $orderTime;
+    public function __construct() {
+        $this->finalPrice = 0;
+        $this->orderTime = new Timestamp();
+        $this->estimatedTimeInMinutes = 0;
     }
 
     public function getFinalPrice(float $price): float {
@@ -18,7 +20,7 @@ class Invoice {
     }
 
     public function addPrice(float $price): float {
-        $this->finalPrice += $this->estimatedTimeInMinutes;
+        $this->finalPrice += $price;
         return $this->finalPrice;
     }
 
@@ -32,7 +34,7 @@ class Invoice {
     }
 
     public function printInvoice(): void {
-        $date = date('Y/m/d H:s', $this->orderTime->getTimestamp());
+        $date = $this->orderTime->getTimestamp();
         $line = str_repeat('-', 30);
 
         printf(

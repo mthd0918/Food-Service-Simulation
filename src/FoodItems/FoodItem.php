@@ -1,5 +1,5 @@
 <?php
-namespace FoodItems\FoodItem;
+namespace FoodItems;
 
 abstract class FoodItem {
     protected string $name;
