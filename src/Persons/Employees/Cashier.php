@@ -3,7 +3,6 @@ namespace Persons\Employees;
 
 use Restaurants\Restaurant;
 use FoodOrders\FoodOrder;
-use Invoices\Invoice;
 
 class Cashier extends Employee {
     public function __construct(string $name, int $age, string $address, int $employeeId, float $salary){
@@ -16,22 +15,24 @@ class Cashier extends Employee {
         );
     }
 
-    public function generateOrder(array $categories, Restaurant $restaurant): FoodOrder {
-        echo "{$this->name} received the order.";
-        $order = new FoodOrder($categories);
-        return $order;
+    /**
+     * Summary of generateOrder
+     * オーダー作成メッセージの表示
+     * @param array $categories
+     * @param \Restaurants\Restaurant $restaurant
+     * @return \FoodOrders\FoodOrder
+     */
+
+    public function generateOrder(array $items, Restaurant $restaurant): FoodOrder {
+        $foodOrder = new FoodOrder($items);
+        echo "generateOrder";
+        $this->calcFinalPrice($items, $restaurant);
+        return $foodOrder;
     }
 
-    public function generateInvoice(FoodOrder $order): Invoice {
-        $invoice = new Invoice($order->getOrderTime());
-
-        echo "{$this->name} received the order.\n";
-        foreach ($order->getItems() as $foodItems) {
-            $invoice->addPrice($foodItems->getPrice());
-        }
-
-        echo "{$this->name} made the invoice.\n";
-
-        return $invoice;
+    public function calcFinalPrice(array $items, Restaurant $restaurant) {
+        $finalPrice = 0.0;
+        $menu = $restaurant->getMenuCategories();
+        echo "cashier";
     }
 }

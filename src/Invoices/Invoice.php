@@ -14,25 +14,6 @@ class Invoice {
         $this->estimatedTimeInMinutes = 0;
     }
 
-    public function getFinalPrice(float $price): float {
-        $this->finalPrice += $price;
-        return $this->finalPrice;
-    }
-
-    public function addPrice(float $price): float {
-        $this->finalPrice += $price;
-        return $this->finalPrice;
-    }
-
-    public function getOrderTime(): Timestamp {
-        return $this->orderTime;
-    }
-
-    public function addEstimatedTimeInMinutes(int $estimatedTPreparedMinutes): int {
-        $this->estimatedTimeInMinutes += $estimatedTPreparedMinutes;
-        return $this->estimatedTimeInMinutes;
-    }
-
     public function printInvoice(): void {
         $date = $this->orderTime->getTimestamp();
         $line = str_repeat('-', 30);

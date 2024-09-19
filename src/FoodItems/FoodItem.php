@@ -18,6 +18,10 @@ abstract class FoodItem {
         return $this->name;
     }
 
+    public function getPrice(): float {
+        return $this->price;
+    }
+
     public function getPreparationTimeInMinutes(): int {
         return $this->preparationTime;
     }
