@@ -8,7 +8,7 @@ class FoodOrder {
     private Timestamp $orderTime;
 
     public function __construct(array $items){
-        $this->items;
+        $this->items = $items;
         $this->orderTime = new Timestamp();
     }
 
