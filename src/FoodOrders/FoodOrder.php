@@ -2,7 +2,6 @@
 namespace FoodOrders;
 
 use Timestamps\Timestamp;
-use FoodItems\FoodItem;
 
 class FoodOrder {
     private array $items = [];

@@ -9,9 +9,9 @@ class Margherita extends FoodItem {
 
     public function __construct() {
         parent::__construct(
-            $name = "Margherita",
-            $description = "This is Margherita",
-            $price = 10.0
+            "Margherita",
+            "This is Margherita",
+            10.0
         );
         $this->preparationTIme = 8;
     }

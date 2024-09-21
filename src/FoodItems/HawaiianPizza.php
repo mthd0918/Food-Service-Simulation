@@ -9,9 +9,9 @@ class HawaiianPizza extends FoodItem {
 
     public function __construct() {
         parent::__construct(
-            $name = "HawaiianPizza",
-            $description = "This is HawaiianPizza",
-            $price = 20.0,
+            "HawaiianPizza",
+            "This is HawaiianPizza",
+            20.0,
         );
         $this->preparationTime = 7;
     }

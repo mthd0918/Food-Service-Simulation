@@ -9,9 +9,9 @@ class Spaghetti extends FoodItem {
 
     public function __construct() {
         parent::__construct(
-            $name = "Spaghetti",
-            $description = "This is Spaghetti",
-            $price = 10.0
+            "Spaghetti",
+            "This is Spaghetti",
+            10.0
         );
     }
 
