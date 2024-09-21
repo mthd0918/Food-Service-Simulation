@@ -14,4 +14,13 @@ class Chef extends Employee {
         );
     }
 
+    public function prepareFood(FoodOrder $foodOrder): string {
+        $preparationTime = 0;
+
+        foreach ($foodOrder->getItems() as $item) {
+            echo "{$this->name} was cooking {$item}.\n";
+        }
+
+        return "{$this->name} took {$preparationTime} minutes to cook.\n";
+    }
 }

@@ -23,16 +23,9 @@ class Cashier extends Employee {
      * @return \FoodOrders\FoodOrder
      */
 
-    public function generateOrder(array $items, Restaurant $restaurant): FoodOrder {
+    public function generateOrder(array $items): FoodOrder {
+        echo "{$this->name} received the order.\n";
         $foodOrder = new FoodOrder($items);
-        echo "generateOrder";
-        $this->calcFinalPrice($items, $restaurant);
         return $foodOrder;
-    }
-
-    public function calcFinalPrice(array $items, Restaurant $restaurant) {
-        $finalPrice = 0.0;
-        $menu = $restaurant->getMenuCategories();
-        echo "cashier";
     }
 }

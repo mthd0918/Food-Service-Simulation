@@ -7,11 +7,10 @@ abstract class FoodItem {
     protected float $price;
     protected int $preparationTime;
 
-    public function __construct(string $name, string $description, float $price, int $preparationTime) {
+    public function __construct(string $name, string $description, float $price) {
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
-        $this->preparationTime = $preparationTime;
     }
 
     public function getCategory(): string {
@@ -20,9 +19,5 @@ abstract class FoodItem {
 
     public function getPrice(): float {
         return $this->price;
-    }
-
-    public function getPreparationTimeInMinutes(): int {
-        return $this->preparationTime;
     }
 }
