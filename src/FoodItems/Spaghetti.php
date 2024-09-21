@@ -5,13 +5,13 @@ namespace FoodItems;
 use FoodItems\FoodItem;
 
 class Spaghetti extends FoodItem {
-    protected int $preparationTIme;
 
     public function __construct() {
         parent::__construct(
             "Spaghetti",
             "This is Spaghetti",
-            10.0
+            10.0,
+            8
         );
     }
 

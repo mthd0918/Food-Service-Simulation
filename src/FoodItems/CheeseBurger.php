@@ -5,15 +5,14 @@ namespace FoodItems;
 use FoodItems\FoodItem;
 
 class CheeseBurger extends FoodItem {
-    protected int $preparationTime;
 
     public function __construct(){
         parent::__construct(
             "CheeseBurger",
             "This is Cheese Burger",
             10.0,
+            5
         );
-        $this->preparationTime = 5;
     }
 
     public function getCategory(): string {

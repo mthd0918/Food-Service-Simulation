@@ -21,11 +21,9 @@ class Restaurant {
         $cashier = $this->getCashier();
         $foodOrder = $cashier->generateOrder($order);
 
-        print_r($foodOrder);
-
         // Chefの呼び出し、料理の準備
         $chef = $this->getChef();
-        $chef->prepareFood($foodOrder);
+        echo $chef->prepareFood($foodOrder);
 
         $invoice = new Invoice();
         return $invoice;
