@@ -14,6 +14,10 @@ class Invoice {
         $this->estimatedTimeInMinutes = 0;
     }
 
+    public function setFinalPrice($price): float {
+        return $this->finalPrice = $price;
+    }
+
     public function printInvoice(): void {
         $date = $this->orderTime->getTimestamp();
         $line = str_repeat('-', 30);
