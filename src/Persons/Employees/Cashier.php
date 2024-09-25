@@ -49,9 +49,7 @@ class Cashier extends Employee {
                 $finalPrice += $menuPrice[$item] * $quantity;
             }
         }
-
-        print_r($finalPrice);
-
+        
         $invoice = new Invoice();
         $invoice->setFinalPrice($finalPrice);
         return $invoice;
